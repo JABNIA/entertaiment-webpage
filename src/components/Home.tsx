@@ -8,7 +8,7 @@ import { Movie } from "./types";
 
 function Home() {
   const context = useEntertaimentContext()
-  const [movies, setMovies] = useState<Movie[]>(context.movies)
+  const [movies] = useState<Movie[]>(context.movies)
   console.log("rerender happened")
 
   return (

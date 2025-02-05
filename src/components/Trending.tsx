@@ -44,7 +44,7 @@ function Trending() {
   return (
     <TrendingWrapper ref={trendingContainer}>
       {trendingMovies.map((trend) => (
-        <SingleTrendingMovie key={trend.title} movie={trend} setMovies={context.setMovies}/>
+        <SingleTrendingMovie key={trend.title} movie={trend} setMovies={context.setMovies} setDisplayMovies={() => trendingMovies}/>
       ))}
     </TrendingWrapper>
   );

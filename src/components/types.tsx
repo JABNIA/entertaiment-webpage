@@ -26,7 +26,7 @@ export type Movie = {
   export interface SingleMovieProps{
     movie: Movie,
     setMovies: React.Dispatch<React.SetStateAction<Movie[]>>,
-    setDisplayMovies: React.Dispatch<React.SetStateAction<Movie[]>>
+    setDisplayMovies: React.Dispatch<React.SetStateAction<Movie[]>>,
 }
 
 export interface contextProps {
