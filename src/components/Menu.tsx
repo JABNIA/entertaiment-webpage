@@ -92,7 +92,31 @@ const MenuContainer = styled.div`
     .active svg {
         fill: #FFFFFF;
     }
-`
+
+    @media (max-width:1440px){
+        min-width: 375px;
+        width: 95%;
+        height: 72px;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 23px 24px 0 25px; 
+        
+        .logo-container{
+            margin: 24px 0 22.4px 24px; 
+        }
+        
+        .menu-icons{
+            display: flex;
+            flex-direction: row;
+            gap: 40px; 
+        }
+        
+        .menu-item:hover svg {
+            fill: #FC4747;
+            cursor: pointer;
+        }
+    }
+        `
 
 const Avatar = styled.div`
     width: 40px;
@@ -106,5 +130,11 @@ const Avatar = styled.div`
         height: 100%;
         margin: 0;
         padding: 0;
+    }
+
+    @media (max-width:1440px){
+        width: 32px;
+        height: 32px;
+        margin: 21px 16px 19px 0;
     }
 `

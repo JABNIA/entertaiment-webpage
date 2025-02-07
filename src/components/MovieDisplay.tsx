@@ -29,10 +29,15 @@ export default MovieDisplay;
 
 
 export const MoviesContainer = styled.section`
-  width: 1240px;
+  width: 100%;
   height: auto;
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
   margin: 40px 32px;
+
+  @media (max-width: 1440px) {
+  gap: 29px;
+  padding: 24px auto;
+  }
 `

@@ -43,4 +43,9 @@ const AppWrapper = styled.div`
     color: #FFFFFF;
     margin: auto;
 
+    @media (max-width: 1440px){
+      width: 100%;
+      flex-direction: column;
+    }
+
 `

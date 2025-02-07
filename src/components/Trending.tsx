@@ -96,6 +96,7 @@ export default Trending;
 
 const TrendingWrapper = styled.section`
   width: 1240px;
+  height: 230px;
   display: flex;
   overflow: auto;
   gap: 40px;
@@ -103,7 +104,15 @@ const TrendingWrapper = styled.section`
   -ms-overflow-style: none;
   scrollbar-width: none;  
   scroll-behavior: smooth;
-`;
+
+  @media (max-width: 1440px) {
+  }
+  
+  @media (max-width: 768px) {
+  height: 140px;
+  gap: 16px;
+  }
+`
 
 
 const TrendingMovieContainer = styled.div`
@@ -147,5 +156,51 @@ const TrendingMovieContainer = styled.div`
         padding: 9px 10px;
         border-radius: 50%;
         background-color: rgba(12, 14, 24, 0.51);
+    }
+
+    @media (max-width: 768px) {
+      width: 240px;
+      height: 140px;
+
+      img {
+        width: 240px;
+        height: 140px;
+        border-radius: 8px;
+      }
+
+      .info {
+        width: 150px;
+        height: 19px;
+      }
+
+      .title {
+        width: 91px;
+        height: 19px;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 18.9px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+      }
+
+      .info-wrapper {
+        position: absolute;
+        left: 16px;
+        bottom: 16px;
+        font-family: Outfit;
+
+      }
+
+      .bookmark {
+          position: absolute;
+          top: 16px;
+          right: 16px;
+          width: 32px;
+          height: 32px;
+          padding: 9px 10px;
+          border-radius: 50%;
+          background-color: rgba(12, 14, 24, 0.51);
+      }
     }
 `

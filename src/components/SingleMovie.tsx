@@ -66,4 +66,46 @@ const MovieContainer = styled.div`
         background-color: #FFFFFF;    
         fill: #000000;
     }
+
+    @media (max-width: 1440px){
+        width: 220px;
+        height: 192px;
+
+        img {
+            width: 220px;
+            height: 140px;
+        }
+
+        .bookmark {
+            width: 32px;
+            height: 32px;
+        }
+
+        .bookmark:hover {
+            background-color: #FFFFFF;    
+            fill: #000000;
+        }
+    }
+
+    @media (max-width: 768px){
+        width: 164px;
+        height: 154px;
+
+        img {
+            width: 164px;
+            height: 110px;
+        }
+
+        .bookmark {
+            top: 8px;
+            right: 8px;
+            width: 32px;
+            height: 32px;
+        }
+
+        .bookmark:hover {
+            background-color: #FFFFFF;    
+            fill: #000000;
+        }
+    }
 `
