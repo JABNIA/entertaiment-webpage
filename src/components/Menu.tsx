@@ -116,7 +116,15 @@ const MenuContainer = styled.div`
             cursor: pointer;
         }
     }
-        `
+    @media (max-width:768px){
+        width: 100vw;
+        height: 72px;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0;
+        border-radius: 0%;
+        }
+`
 
 const Avatar = styled.div`
     width: 40px;

@@ -53,7 +53,7 @@ const SearchBarWrapper = styled.section`
   gap: 32px;
 
   input {
-    width: 95%;
+    width: 321px;
     height: 100%;
     background-color: transparent;
     border: none;
@@ -69,10 +69,47 @@ const SearchBarWrapper = styled.section`
   }
 
   input::placeholder {
-    color: #ffffff;
+    font-family: Outfit;
+    color: rgba(255, 255, 255, 0.49);
   }
 
   input:focus {
     border-bottom: 1px solid #5a698f;
+  }
+
+  @media (max-width: 1440px) {
+    max-width: 1440px;
+    margin: 32px 25px 0;
+    gap: 24px;
+  
+    input{
+        width: 128px;
+      }
+
+    input::placeholder {
+    font-family: Outfit;
+    color: rgba(255, 255, 255, 0.49);
+  }
+  }
+
+  @media (max-width: 768px) {
+    max-width: 257px;
+    margin: 24px 16px 0;
+    gap: 16px;   
+    
+      input{
+        width: 214px;
+      } 
+      input::placeholder {
+        font-family: Outfit;
+        color: rgba(255, 255, 255, 0.49);
+        font-family: Outfit;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 20.16px;
+        letter-spacing: 0px;
+
+  }
+
   }
 `;

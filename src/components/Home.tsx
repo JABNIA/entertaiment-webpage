@@ -30,6 +30,12 @@ const MoviesSegment = styled.main`
   h2{
     padding: 0 32px;
   }
+
+  @media (max-width: 768px){
+    h2{
+      padding: 0 0 0 16px;
+    }
+  }
 `
 
 

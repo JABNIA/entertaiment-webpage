@@ -109,8 +109,11 @@ const TrendingWrapper = styled.section`
   }
   
   @media (max-width: 768px) {
+  width: 90vw;
   height: 140px;
   gap: 16px;
+  margin: 25px 16px;
+
   }
 `
 
@@ -161,6 +164,7 @@ const TrendingMovieContainer = styled.div`
     @media (max-width: 768px) {
       width: 240px;
       height: 140px;
+      margin: 0;
 
       img {
         width: 240px;
