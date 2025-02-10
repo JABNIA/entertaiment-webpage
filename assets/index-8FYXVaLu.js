@@ -107,7 +107,15 @@ Please change the parent <Route path="${D}"> to <Route path="${D==="/"?"*":`${D}
             cursor: pointer;
         }
     }
-        `,my=jt.div`
+    @media (max-width:768px){
+        width: 100vw;
+        height: 72px;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0;
+        border-radius: 0%;
+        }
+`,my=jt.div`
     width: 40px;
     height: 40px;
     margin-top: 492px;
@@ -136,7 +144,7 @@ Please change the parent <Route path="${D}"> to <Route path="${D==="/"?"*":`${D}
   gap: 32px;
 
   input {
-    width: 95%;
+    width: 321px;
     height: 100%;
     background-color: transparent;
     border: none;
@@ -152,11 +160,48 @@ Please change the parent <Route path="${D}"> to <Route path="${D==="/"?"*":`${D}
   }
 
   input::placeholder {
-    color: #ffffff;
+    font-family: Outfit;
+    color: rgba(255, 255, 255, 0.49);
   }
 
   input:focus {
     border-bottom: 1px solid #5a698f;
+  }
+
+  @media (max-width: 1440px) {
+    max-width: 1440px;
+    margin: 32px 25px 0;
+    gap: 24px;
+  
+    input{
+        width: 128px;
+      }
+
+    input::placeholder {
+    font-family: Outfit;
+    color: rgba(255, 255, 255, 0.49);
+  }
+  }
+
+  @media (max-width: 768px) {
+    max-width: 257px;
+    margin: 24px 16px 0;
+    gap: 16px;   
+    
+      input{
+        width: 214px;
+      } 
+      input::placeholder {
+        font-family: Outfit;
+        color: rgba(255, 255, 255, 0.49);
+        font-family: Outfit;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 20.16px;
+        letter-spacing: 0px;
+
+  }
+
   }
 `,wy=gy;function xy(){const[l,u]=P.useState(wy),[a,c]=P.useState(""),f={movies:l,setMovies:u};return P.useEffect(()=>{},[l]),$.jsx(ky,{children:$.jsxs(Td.Provider,{value:f,children:[$.jsx(dy,{}),$.jsxs("div",{children:[$.jsx(yy,{movieName:a,setMovieName:c}),$.jsx(Rm,{context:a})]})]})})}const ky=jt.div`
     width: 1440px;
@@ -185,8 +230,11 @@ Please change the parent <Route path="${D}"> to <Route path="${D==="/"?"*":`${D}
   }
   
   @media (max-width: 768px) {
+  width: 90vw;
   height: 140px;
   gap: 16px;
+  margin: 25px 16px;
+
   }
 `,Py=jt.div`
     position: relative;
@@ -234,6 +282,7 @@ Please change the parent <Route path="${D}"> to <Route path="${D==="/"?"*":`${D}
     @media (max-width: 768px) {
       width: 240px;
       height: 140px;
+      margin: 0;
 
       img {
         width: 240px;
@@ -345,7 +394,7 @@ Please change the parent <Route path="${D}"> to <Route path="${D==="/"?"*":`${D}
         }
     }
 `;function sl({movies:l}){const u=mr(),a=dm(),[c,f]=P.useState(l),d=a===""?c:c.filter(h=>h.title.toLowerCase().includes(a.toLocaleLowerCase()));return $.jsx(jy,{children:d.map(h=>$.jsx(_y,{movie:h,setMovies:u.setMovies,setDisplayMovies:f},h.title))})}const jy=jt.section`
-  width: 100%;
+  max-width: 1240px;
   height: auto;
   display: flex;
   flex-wrap: wrap;
@@ -353,14 +402,27 @@ Please change the parent <Route path="${D}"> to <Route path="${D==="/"?"*":`${D}
   margin: 40px 32px;
 
   @media (max-width: 1440px) {
-  gap: 29px;
-  padding: 24px auto;
+    gap: 29px;
+    padding: 24px auto;
+  }
+  
+  @media (max-width: 768px) {
+    max-width: 343px;
+    gap: 15px;
+    padding: 24px auto;
+    margin: 40px auto 0;
   }
 `;function Ty(){const l=mr(),[u]=P.useState(l.movies);return console.log("rerender happened"),$.jsxs(Ny,{children:[$.jsx("h2",{children:"trending"}),$.jsx(Sy,{}),$.jsx("h2",{children:"Recomended for you"}),$.jsx(sl,{movies:u})]})}const Ny=jt.main`
   margin: 64px 0 0;
 
   h2{
     padding: 0 32px;
+  }
+
+  @media (max-width: 768px){
+    h2{
+      padding: 0 0 0 16px;
+    }
   }
 `;function Ly(){const u=mr().movies.filter(a=>a.category==="Movie");return console.log(u),$.jsx(sl,{movies:u})}function zy(){const u=mr().movies.filter(a=>a.category==="TV Series");return console.log(u),$.jsx(sl,{movies:u})}function Iy(){const l=mr(),u=l.movies.filter(c=>c.isBookmarked&&c.category==="Movie"),a=l.movies.filter(c=>c.isBookmarked&&c.category==="TV Series");return $.jsxs(Fy,{children:[u.length===0?null:$.jsxs($.Fragment,{children:[$.jsx("h2",{children:"Bookmarked Movies"}),$.jsx(sl,{movies:u})]}),a.length===0?null:$.jsxs($.Fragment,{children:[$.jsx("h2",{children:"Bookmarked TV Series"}),$.jsx(sl,{movies:a})]})]})}const Fy=jt.section`
   width: 1240px;
